@@ -1,0 +1,161 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+:root {
+    --font-stack: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    --text-color: #111;
+    --bg-color: #fff;
+    --border-color: #e5e5e5;
+    --link-color: #0066cc;
+    --muted-color: #666;
+}
+
+body {
+    font-family: var(--font-stack);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* Layout */
+.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Typography scale */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Hero section */
+.hero {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--muted-color);
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .tagline {
+        font-size: 15px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Sections */
+section {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* Lists */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding-left: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.link-list li {
+    margin-bottom: 12px;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+}
+
+
+/* Footer */
+footer {
+    padding: 32px 0 24px;
+    font-size: 14px;
+    color: var(--muted-color);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Dark mode variant */
+.dark {
+    --text-color: #e5e5e5;
+    --bg-color: #0a0a0a;
+    --border-color: #333;
+    --link-color: #6db3f2;
+    --muted-color: #999;
+}
+
+.dark body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
